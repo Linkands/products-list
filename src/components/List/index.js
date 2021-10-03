@@ -4,26 +4,21 @@ import React from 'react'
 function List({ products, deleteProduct, addToCart }) {
   return (
     <ul className={styles.list}>
-      {products.map((product) => (
-        <li key={product.id}>
+      {products.map(({ id, image, name, price }) => (
+        <li key={id}>
           <button
             className={styles.deleteBtn}
-            onClick={() => deleteProduct(product.id)}
+            onClick={() => deleteProduct(id)}
           >
             X
           </button>
-          <img
-            src={product.image}
-            alt={product.name}
-            height={100}
-            width={110}
-          ></img>
-          <p>{product.name}</p>
-          <p>{product.price}</p>
+          <img src={image} alt={name} height={100} width={110}></img>
+          <p>{name}</p>
+          <p>{price}</p>
           <button
             className={styles.button}
             onClick={() => {
-              addToCart(product.id, product.name, product.price, product.image)
+              addToCart(id, name, price, image)
             }}
           >
             Add to cart
