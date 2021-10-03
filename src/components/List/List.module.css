@@ -1,6 +1,9 @@
 ul {
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
 }
 
 li {
@@ -10,6 +13,7 @@ li {
   border: 1px solid black;
   border-radius: 10px;
   position: relative;
+  background: #ebebeb;
 }
 
 p {
@@ -22,4 +26,23 @@ p {
   background: none;
   right: 0px;
   top: 4px;
+}
+
+.button {
+  background: rgb(28, 184, 65);
+  color: white;
+  font-size: small;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 5px 15px 5px 15px;
+}
+
+.list {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+img {
+  object-fit: cover;
 }

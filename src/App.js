@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from './components/Container'
 import Form from './components/Form'
 import List from './components/List'
 import Cart from './components/Cart'
@@ -23,6 +24,8 @@ function App() {
         break
       case 'price':
         setPrice(value)
+        break
+      default:
         break
     }
   }
@@ -52,7 +55,7 @@ function App() {
   }
 
   return (
-    <>
+    <Container>
       <Form
         name={name}
         image={image}
@@ -66,7 +69,7 @@ function App() {
         deleteProduct={deleteProduct}
         addToCart={addToCart}
       ></List>
-    </>
+    </Container>
   )
 }
 

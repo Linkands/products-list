@@ -3,7 +3,7 @@ import React from 'react'
 
 function List({ products, deleteProduct, addToCart }) {
   return (
-    <ul>
+    <ul className={styles.list}>
       {products.map((product) => (
         <li key={product.id}>
           <button
@@ -16,11 +16,12 @@ function List({ products, deleteProduct, addToCart }) {
             src={product.image}
             alt={product.name}
             height={100}
-            width={150}
+            width={110}
           ></img>
           <p>{product.name}</p>
           <p>{product.price}</p>
           <button
+            className={styles.button}
             onClick={() => {
               addToCart(product.id, product.name, product.price, product.image)
             }}
