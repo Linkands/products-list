@@ -1,11 +1,10 @@
-import React from 'react'
 import styles from './Form.module.css'
 
-function Form({ name, price, image, handleChange }) {
+function Form({ name, price, image, handleChange, handleSubmit }) {
   return (
     <div className={styles.wrapper}>
       <h2>Form</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           name="image"
           value={image}

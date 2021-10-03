@@ -1,0 +1,25 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+
+p {
+  margin: 5px;
+}
+
+.deleteBtn {
+  position: absolute;
+  border-style: none;
+  background: none;
+  right: 0px;
+  top: 4px;
+}
