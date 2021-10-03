@@ -18,7 +18,7 @@ function Form({ name, price, image, handleChange, handleSubmit }) {
           name="name"
           value={name}
           required
-          placeholder="John"
+          placeholder="Product name"
           onChange={handleChange}
         ></input>
         <label>Price</label>
